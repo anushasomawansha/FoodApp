@@ -4,4 +4,6 @@
     <string name="nav2">Location</string>
     <string name="nav3">Cart</string>
     <string name="nav4">Account</string>
+    <string name="nav_search">search</string>
+    <string name="nav_button">topnav</string>
 </resources>

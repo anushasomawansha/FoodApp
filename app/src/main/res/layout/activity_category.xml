@@ -30,4 +30,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:menu="@menu/bottom_menu" />
 
+    <ImageView
+        android:id="@+id/top_nav"
+        android:layout_width="49dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="@string/nav_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_reorder_24" />
+
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="154dp"
+        android:layout_height="41dp"
+        android:background="#FFFFFF"
+        android:contentDescription="@string/nav_search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.012" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
