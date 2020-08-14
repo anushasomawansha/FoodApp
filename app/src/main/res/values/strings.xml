@@ -6,4 +6,18 @@
     <string name="nav4">Account</string>
     <string name="nav_search">search</string>
     <string name="nav_button">topnav</string>
+    <string name="btn_check">Check Out</string>
+    <string name="add_string1">EXPLORE MENU</string>
+    <string name="add_string2">Add more items to your order</string>
+    <string name="order">Order Payment :</string>
+    <string name="sub_t">Sub Total              : ....................00</string>
+    <string name="dis">Discount               : .....................00</string>
+    <string name="delivery">Deivery charges : ......................00</string>
+    <string name="total">Grand Total          : ....................00</string>
+    <string name="no_items">No of Items :</string>
+    <string name="qty">Qty</string>
+    <string name="p">Pizza</string>
+    <string name="name">Item Name :</string>
+    <string name="des">Description :</string>
+    <string name="price">Item Price : Rs.......00</string>
 </resources>
