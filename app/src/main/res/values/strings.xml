@@ -20,4 +20,5 @@
     <string name="name">Item Name :</string>
     <string name="des">Description :</string>
     <string name="price">Item Price : Rs.......00</string>
+
 </resources>
