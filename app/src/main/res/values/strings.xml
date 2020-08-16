@@ -6,4 +6,25 @@
     <string name="nav4">Account</string>
     <string name="nav_search">search</string>
     <string name="nav_button">topnav</string>
+
+    <!--Strings related to Login/signup/forgot password/delivery options-->
+	<string name="email">Email</string>
+    <string name="passowrd">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="show_pwd">Show Password</string>
+    <string name="hide_pwd">Hide Password</string>
+    <string name="forgot">Forgot password?</string>
+    <string name="newUser">Not a Member yet? Sign Up here.</string>
+    <string name="fullName">Name</string>
+    <string name="mobileNumber">Mobile Number</string>
+    <string name="location">Location</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="terms_conditions">By clicking SignUp you agree all the Terms and Conditions.</string>
+    <string name="signUp">SIGN UP</string>
+    <string name="already_user">Already have Account? Login here.</string>
+    <string name="registered_emailid">Please enter your Registered Email below:</string>
+    <string name="submit">SUBMIT</string>
+    <string name="back">BACK</string>
+    <string name="delivery">Delivery Options</string>
+    <string name="last_ords">View Your Previous Orders</string>
 </resources>
