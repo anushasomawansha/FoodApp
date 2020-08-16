@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Category">
+    tools:context=".DeleteItem">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -28,7 +28,13 @@
         app:itemBackground="@color/design_default_color_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:menu="@menu/bottom_menu" />
+        app:menu="@menu/bottom_menu" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"></LinearLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <ImageView
         android:id="@+id/top_nav"
@@ -86,13 +92,12 @@
 
     </com.google.android.material.tabs.TabLayout>
 
-
     <TextView
         android:id="@+id/delItem"
         android:layout_width="236dp"
         android:layout_height="40dp"
         android:fontFamily="@font/aclonica"
-        android:text="@string/main"
+        android:text="@string/fName"
         android:textAlignment="center"
         android:textColor="#2E62F3"
         android:textSize="30sp"
@@ -166,7 +171,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:contentDescription="@string/con_des"
-                    app:srcCompat="@drawable/ic_add_to_cart" />
+                    app:srcCompat="@drawable/ic_delete" />
 
             </TableRow>
 
@@ -219,7 +224,7 @@
                     android:layout_width="87dp"
                     android:layout_height="70dp"
                     android:contentDescription="@string/con_des"
-                    app:srcCompat="@drawable/ic_add_to_cart" />
+                    app:srcCompat="@drawable/ic_delete" />
 
             </TableRow>
 
@@ -272,7 +277,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:contentDescription="@string/con_des"
-                    app:srcCompat="@drawable/ic_add_to_cart" />
+                    app:srcCompat="@drawable/ic_delete" />
 
             </TableRow>
 
@@ -325,7 +330,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:contentDescription="@string/con_des"
-                    app:srcCompat="@drawable/ic_add_to_cart" />
+                    app:srcCompat="@drawable/ic_delete" />
             </TableRow>
 
             <TableRow
@@ -375,7 +380,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="70dp"
                     android:contentDescription="@string/con_des"
-                    app:srcCompat="@drawable/ic_add_to_cart" />
+                    app:srcCompat="@drawable/ic_delete" />
 
             </TableRow>
         </TableLayout>
