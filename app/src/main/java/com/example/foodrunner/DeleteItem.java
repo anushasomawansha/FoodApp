@@ -10,8 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.foodrunner.CatManagement.Activity.ProductList;
+import com.example.foodrunner.CatManagement.Model.Products;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DataSnapshot;
@@ -19,52 +22,66 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DeleteItem extends AppCompatActivity {
 
     TextView textViewName , textViewPrice;
     Button btnDel;
     DatabaseReference dbRef;
-    private RecyclerView recyclerView;
+    StorageReference storageReference;
+    ListView listViewProducts;
 
-    private FirebaseRecyclerOptions<Products> options;
-    private FirebaseRecyclerAdapter<Products,MyViewHolder> adapter;
+
+    List<Products> productsList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete_item);
 
+        listViewProducts= findViewById(R.id.listViewProducts);
+        productsList = new ArrayList<>();
+
+        dbRef = FirebaseDatabase.getInstance().getReference("Products");
+        storageReference = FirebaseStorage.getInstance().getReference("Products");//test
 
 
-        btnDel = findViewById(R.id.btnDel);
 
-        dbRef = FirebaseDatabase.getInstance().getReference().child("Products");
-        recyclerView = findViewById(R.id.recyclerView);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        options=new FirebaseRecyclerOptions.Builder<Products>().setQuery(dbRef,Products.class).build();
-        adapter=new FirebaseRecyclerAdapter<Products, MyViewHolder>(options) {
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        dbRef.addValueEventListener(new ValueEventListener() {
             @Override
-            protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull Products model) {
-                holder.textViewName.setText(String.valueOf(model.getName()));
-                holder.textViewPrice.setText(""+model.getPrice());
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                productsList.clear();
+
+                for(DataSnapshot productSnapshot: snapshot.getChildren()){
+                    Products products = productSnapshot.getValue(Products.class);
+                    productsList.add(products);
 
 
+                }
 
+                ProductList adapter = new ProductList(DeleteItem.this,productsList);
+                listViewProducts.setAdapter(adapter);
             }
 
-            @NonNull
             @Override
-            public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_view_layout,parent,false);
+            public void onCancelled(@NonNull DatabaseError error) {
 
-                return new MyViewHolder(view);
             }
-        };
-        adapter.startListening();
-        recyclerView.setAdapter(adapter);
+        });
 
     }
 }
