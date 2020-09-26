@@ -1,4 +1,4 @@
-package com.example.foodrunner;
+package com.example.foodrunner.ui;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,8 +9,10 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
+import com.example.foodrunner.CartMainActivity;
 import com.example.foodrunner.Model.common.ShopItem;
 import com.example.foodrunner.Model.ui.ExpandShopGroup;
+import com.example.foodrunner.R;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;

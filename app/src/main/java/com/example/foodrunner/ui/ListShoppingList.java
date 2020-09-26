@@ -12,7 +12,6 @@ import android.widget.ExpandableListView;
 import android.widget.ImageButton;
 
 import com.example.foodrunner.CartMainActivity;
-import com.example.foodrunner.CreateAndFillValuesInShoppingRows;
 import com.example.foodrunner.Model.common.ShopItem;
 import com.example.foodrunner.Model.firebase.AddShoppingModel;
 import com.example.foodrunner.Model.ui.ExpandShopGroup;
