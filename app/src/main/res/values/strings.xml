@@ -12,7 +12,10 @@
 
     <color name="Black">#000000</color>
     <color name="ExpendChildBackground">#2e856e</color>
-    <color name="ExpendGroupBackground">#228c22</color>
-    <color name="SplashWindowBackground">#b3e0ff</color>
+    <color name="ExpendChildBackground1">#ffffff</color>
+    <color name="ExpendGroupBackground">#00e600</color>
+    <color name="SplashWindowBackground">#99e6ff</color>
+
+
 
 </resources>

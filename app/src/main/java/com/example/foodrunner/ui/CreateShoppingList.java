@@ -119,7 +119,7 @@ public class CreateShoppingList extends AppCompatActivity {
                 }
                 if(sales.size()==0)
                 {
-                    DynamicToast.makeError(getApplicationContext(), "Provide sale",Toast.LENGTH_LONG).show();
+                    DynamicToast.makeError(getApplicationContext(), "Add Order First",Toast.LENGTH_LONG).show();
                 }
                 else if(!error)
                 {
