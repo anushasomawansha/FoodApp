@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.foodrunner.CatManagement.Activity.AddItem;
+import com.example.foodrunner.CatManagement.Activity.Breakfast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Category.class);
+                Intent intent = new Intent(MainActivity.this, Breakfast.class);
                 startActivity(intent);
             }
         });

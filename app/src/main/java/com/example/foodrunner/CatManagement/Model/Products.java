@@ -18,6 +18,15 @@ public class Products {
         this.category = category;
     }
 
+    public Products(String id, String imageURL, String name, Float price, String category) {
+
+        this.productId = productId;
+        this.name = name;
+        this.imageURL = imageURL;
+        this.price = price;
+        this.category = category;
+    }
+
 
     public String getProductId() {
         return productId;
@@ -37,5 +46,9 @@ public class Products {
 
     public String getImageURL() {
         return imageURL;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
     }
 }

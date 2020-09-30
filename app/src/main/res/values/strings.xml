@@ -37,5 +37,9 @@
     <string name="itemPri5">Rs 350.00</string>
     <string name="browse">Browse</string>
     <string name="AddImage">Add Image</string>
+    <string name="Browse">Browse</string>
+    <string name="btnUpdate">Update</string>
+    <string name="addtocart">Add To Cart</string>
+    <string name="Profucts">Products</string>
 
 </resources>
