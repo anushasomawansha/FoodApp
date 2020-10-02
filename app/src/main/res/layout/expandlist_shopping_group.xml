@@ -17,13 +17,13 @@
         android:layout_toLeftOf="@id/tv_menu"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_marginRight="95dp"
+        android:layout_marginRight="65dp"
         android:textColor="#000000"
         android:textSize="20dip"/>
 
     <TextView
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:id="@+id/tv_menu"
         android:textSize="20sp"
         android:layout_alignParentRight="true"
