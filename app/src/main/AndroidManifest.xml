@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.ListShoppingList"></activity>
-        <activity android:name=".ui.CreateShoppingList" />
+        <activity android:name=".CartManagement.Model.ui.ListShoppingList"></activity>
+        <activity android:name=".CartManagement.Model.ui.CreateShoppingList" />
         <activity android:name=".CartMainActivity" />
         <activity android:name=".Category" />
         <activity android:name=".MainActivity">

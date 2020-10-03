@@ -1,4 +1,4 @@
-package com.example.foodrunner.ui;
+package com.example.foodrunner.CartManagement.Model.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,9 +12,8 @@ import android.widget.ExpandableListView;
 import android.widget.ImageButton;
 
 import com.example.foodrunner.CartMainActivity;
-import com.example.foodrunner.Model.common.ShopItem;
-import com.example.foodrunner.Model.firebase.AddShoppingModel;
-import com.example.foodrunner.Model.ui.ExpandShopGroup;
+import com.example.foodrunner.CartManagement.Model.common.ShopItem;
+import com.example.foodrunner.CartManagement.Model.firebase.AddShoppingModel;
 import com.example.foodrunner.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

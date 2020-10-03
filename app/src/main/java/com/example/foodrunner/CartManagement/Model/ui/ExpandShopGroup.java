@@ -1,6 +1,6 @@
-package com.example.foodrunner.Model.ui;
+package com.example.foodrunner.CartManagement.Model.ui;
 
-import com.example.foodrunner.Model.common.ShopItem;
+import com.example.foodrunner.CartManagement.Model.common.ShopItem;
 
 import java.io.Serializable;
 import java.text.ParseException;

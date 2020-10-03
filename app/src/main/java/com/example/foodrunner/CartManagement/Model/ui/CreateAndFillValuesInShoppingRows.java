@@ -1,4 +1,4 @@
-package com.example.foodrunner.ui;
+package com.example.foodrunner.CartManagement.Model.ui;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,8 +10,7 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import com.example.foodrunner.CartMainActivity;
-import com.example.foodrunner.Model.common.ShopItem;
-import com.example.foodrunner.Model.ui.ExpandShopGroup;
+import com.example.foodrunner.CartManagement.Model.common.ShopItem;
 import com.example.foodrunner.R;
 import com.google.firebase.database.FirebaseDatabase;
 

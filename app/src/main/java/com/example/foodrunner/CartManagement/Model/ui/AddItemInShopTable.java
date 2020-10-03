@@ -1,4 +1,4 @@
-package com.example.foodrunner.ui;
+package com.example.foodrunner.CartManagement.Model.ui;
 
 import android.content.Context;
 import android.text.InputType;
@@ -81,7 +81,6 @@ public class AddItemInShopTable {
         adddalTableLayout.addView(tr,adddalTableLayout.getChildCount() - 2,
                 new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT,TableLayout.LayoutParams.WRAP_CONTENT));
 
-
     }
 
     private static void addOrRemoveProductSpinner(final Spinner productSpinner, final TableRow tr, final EditText etNewProduct) {
@@ -96,7 +95,6 @@ public class AddItemInShopTable {
                     tr.removeView(etNewProduct);
                 }
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 

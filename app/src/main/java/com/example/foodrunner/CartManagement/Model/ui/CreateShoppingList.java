@@ -1,4 +1,4 @@
-package com.example.foodrunner.ui;
+package com.example.foodrunner.CartManagement.Model.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,8 +12,8 @@ import android.widget.TableRow;
 import android.widget.Toast;
 
 import com.example.foodrunner.CartMainActivity;
-import com.example.foodrunner.Model.common.ShopItem;
-import com.example.foodrunner.Model.firebase.AddShoppingModel;
+import com.example.foodrunner.CartManagement.Model.common.ShopItem;
+import com.example.foodrunner.CartManagement.Model.firebase.AddShoppingModel;
 import com.example.foodrunner.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;

@@ -12,8 +12,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.foodrunner.ui.ListShoppingList;
-
 public class MainActivity extends AppCompatActivity {
 
     private static int SPLASH_TIME_OUT = 5000;

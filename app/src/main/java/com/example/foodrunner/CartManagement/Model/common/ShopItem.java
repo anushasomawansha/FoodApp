@@ -1,4 +1,4 @@
-package com.example.foodrunner.Model.common;
+package com.example.foodrunner.CartManagement.Model.common;
 
 public class ShopItem {
     String category;

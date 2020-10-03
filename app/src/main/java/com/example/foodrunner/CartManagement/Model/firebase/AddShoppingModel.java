@@ -1,6 +1,6 @@
-package com.example.foodrunner.Model.firebase;
+package com.example.foodrunner.CartManagement.Model.firebase;
 
-import com.example.foodrunner.Model.common.ShopItem;
+import com.example.foodrunner.CartManagement.Model.common.ShopItem;
 
 import java.util.Map;
 

@@ -8,7 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.foodrunner.ui.ListShoppingList;
+import com.example.foodrunner.CartManagement.Model.ui.ListShoppingList;
 
 import java.util.UUID;
 
