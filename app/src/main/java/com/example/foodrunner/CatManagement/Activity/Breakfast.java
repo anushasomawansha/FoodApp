@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -12,7 +13,9 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.foodrunner.CatManagement.Model.Products;
+import com.example.foodrunner.MainActivity;
 import com.example.foodrunner.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -71,6 +74,34 @@ public class Breakfast extends AppCompatActivity {
             }
         });
 
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.menu);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.menu:
+                        startActivity(new Intent(getApplicationContext(),Breakfast.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.cart:
+                        startActivity(new Intent(getApplicationContext(),Lunch.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.location:
+                        startActivity(new Intent(getApplicationContext(),Lunch.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.profile:
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+
+                return false;
+            }
+        });
 
 
     }

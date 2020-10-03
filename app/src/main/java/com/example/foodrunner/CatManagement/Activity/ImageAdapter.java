@@ -44,8 +44,8 @@ public class ImageAdapter  extends RecyclerView.Adapter<ImageAdapter.ImageViewHo
         Products productsCurrent = productList.get(position);
 
         holder.textViewName.setText(productsCurrent.getName());
-        holder.textViewPrice.setText(productsCurrent.getPrice().toString());
-        holder.textViewCategory.setText(productsCurrent.getCategory());
+        holder.textViewPrice.setText("Rs. "+productsCurrent.getPrice().toString());
+       // holder.textViewCategory.setText(productsCurrent.getCategory());
         Picasso.with(mContext).load(productsCurrent.getImageURL()).into(holder.imageViewDb);
 
     }

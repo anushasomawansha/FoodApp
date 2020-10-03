@@ -68,7 +68,7 @@ public class ProductList extends ArrayAdapter<Products> {
 
         // imageView.setImageBitmap();
         textViewName.setText(products.getName());
-        textViewPrice.setText(products.getPrice().toString());
+        textViewPrice.setText("Rs. "+products.getPrice().toString());
 //        textViewCategory.setText(products.getCategory());
 
 

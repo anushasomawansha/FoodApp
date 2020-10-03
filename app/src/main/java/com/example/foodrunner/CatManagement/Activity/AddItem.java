@@ -86,7 +86,7 @@ public class AddItem extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AddItem.this , DeleteItem.class);
+                Intent intent = new Intent(AddItem.this , BreakfastAdmin.class);
                 startActivity(intent);
             }
         });
@@ -204,7 +204,7 @@ public class AddItem extends AppCompatActivity {
 
                             Toast.makeText(getApplicationContext(), "Image Uploaded Successfully ", Toast.LENGTH_LONG).show();
 
-                            Intent intent = new Intent(AddItem.this , DeleteItem.class);
+                            Intent intent = new Intent(AddItem.this , BreakfastAdmin.class);
                             startActivity(intent);
 
                         }
@@ -224,7 +224,7 @@ public class AddItem extends AppCompatActivity {
             });
         } else {
 
-            Toast.makeText(AddItem.this, "Please Select Image or Add Image Name", Toast.LENGTH_LONG).show();
+            Toast.makeText(AddItem.this, "Please Select Image", Toast.LENGTH_LONG).show();
 
         }
 

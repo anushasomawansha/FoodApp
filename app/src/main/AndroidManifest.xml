@@ -11,12 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CatManagement.Activity.Dinner"></activity>
+        <activity android:name=".CatManagement.Activity.DinnerAdmin"></activity>
+        <activity android:name=".CatManagement.Activity.LunchAdmin" />
+        <activity android:name=".CatManagement.Activity.BreakfastAdmin" />
+        <activity android:name=".CatManagement.Activity.Dinner" />
         <activity android:name=".CatManagement.Activity.Lunch" />
         <activity android:name=".CatManagement.Activity.Breakfast" />
         <activity android:name=".CatManagement.Activity.DeleteItem" />
         <activity android:name=".CatManagement.Activity.AddItem" />
-        <activity android:name=".Category" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

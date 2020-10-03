@@ -41,5 +41,7 @@
     <string name="btnUpdate">Update</string>
     <string name="addtocart">Add To Cart</string>
     <string name="Profucts">Products</string>
+    <string name="manageitems">Manage Items</string>
+    <string name="longpress">Long Press To Delete/Update Item</string>
 
 </resources>
