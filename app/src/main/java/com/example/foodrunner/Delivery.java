@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.InputType;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -48,6 +49,8 @@ public class Delivery extends AppCompatActivity implements View.OnClickListener 
     FirebaseDatabase db;
     DatabaseReference dbRef;
     DataSnapshot dataSnapshot;
+    private CharSequence date;
+    private CharSequence time;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +93,19 @@ public class Delivery extends AppCompatActivity implements View.OnClickListener 
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
+                if (TextUtils.isEmpty(date)) {
+                    dateIn.setError("Date is Required.");
+                    return;
+                }
+
+                if (TextUtils.isEmpty(time)) {
+                    timeIn.setError("Time is Required");
+                    return;
+                }
+                
+                
                 dbRef = FirebaseDatabase.getInstance().getReference().child("User").child("1");
                 pck.setDate(dateIn.getText().toString().trim());
                 pck.setTime(timeIn.getText().toString().trim());

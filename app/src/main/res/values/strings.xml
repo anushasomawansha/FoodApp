@@ -69,10 +69,12 @@
     <string name="Time">Time</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="pick_place">Pick</string>
+    <string name="pick_place">Pick A place</string>
     <string name="View_Location">View Saved Location</string>
     <string name="Finished"><![CDATA[Thank You For Your Order. Your Order Will be delivered to the Given Address & Given Time.]]></string>
     <string name="ok">OK</string>
+    <string name="view_saved_location">View Saved Location</string>
+    <string name="delivery_options">Delivery Options</string>
 
 
 </resources>
