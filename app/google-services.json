@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "871922969498",
+    "firebase_url": "https://foodrunner-7daa4.firebaseio.com",
+    "project_id": "foodrunner-7daa4",
+    "storage_bucket": "foodrunner-7daa4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871922969498:android:8c53e59bbdae2bf436e823",
+        "android_client_info": {
+          "package_name": "com.example.foodrunner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "871922969498-hvber0s19r9lu8d4pdcqo9ib227ntn83.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgkHDvl7l1RUJdw5iQHexA89ib7SnA_l0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "871922969498-hvber0s19r9lu8d4pdcqo9ib227ntn83.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
