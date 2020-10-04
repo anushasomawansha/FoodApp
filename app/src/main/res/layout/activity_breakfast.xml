@@ -2,24 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout2"
+    android:id="@+id/linearLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".CatManagement.Activity.Breakfast">
+    tools:context=".CatManagement.Activity.Lunch">
 
-
-    <Button
-        android:id="@+id/btnBreakfast"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
-        android:text="@string/tab1"
-        android:textColor="@color/design_default_color_background"
-        app:layout_constraintBottom_toTopOf="@+id/listViewProducts"
-        app:layout_constraintEnd_toStartOf="@+id/btnLunch"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnLunch"
@@ -33,6 +21,19 @@
         app:layout_constraintStart_toEndOf="@+id/btnBreakfast" />
 
     <Button
+        android:id="@+id/btnBreakfast"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/tab1"
+        android:textColor="@color/design_default_color_background"
+        app:layout_constraintBottom_toTopOf="@+id/listViewProducts"
+        app:layout_constraintEnd_toStartOf="@+id/btnLunch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <Button
         android:id="@+id/btnDinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -42,16 +43,18 @@
         app:layout_constraintBottom_toTopOf="@+id/listViewProducts"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnLunch"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
 
 
     <ListView
         android:id="@+id/listViewProducts"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="397dp"
+        android:layout_height="616dp"
+        android:layout_marginBottom="56dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/btnBreakfast"
-        app:layout_constraintTop_toBottomOf="@+id/btnDinner">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
     </ListView>
 
@@ -70,14 +73,10 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="509dp"
         app:itemBackground="@color/colorPrimary"
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/listViewProducts"
         app:menu="@menu/menu_navigation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
