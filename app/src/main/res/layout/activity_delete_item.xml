@@ -94,7 +94,7 @@
     </com.google.android.material.tabs.TabLayout>
 
     <TextView
-        android:id="@+id/delItem"
+        android:id="@+id/productList"
         android:layout_width="236dp"
         android:layout_height="40dp"
         android:fontFamily="@font/aclonica"
