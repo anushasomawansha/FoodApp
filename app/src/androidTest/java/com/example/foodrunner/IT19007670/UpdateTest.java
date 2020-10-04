@@ -7,6 +7,8 @@ import androidx.test.rule.ActivityTestRule;
 
 import com.example.foodrunner.CatManagement.Activity.BreakfastAdmin;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,10 +25,22 @@ public class UpdateTest {
     @Rule
     public ActivityTestRule<BreakfastAdmin> addItemActivityTestRule = new ActivityTestRule(BreakfastAdmin.class);
 
+    @Before
+    public void setUp() throws Exception{
+
+    }
+
+
     @Test
     public void updateItemTest(){
         onView(withText("Product Updated"))
                 .inRoot(new ToastMatcher())
                 .check(matches(isDisplayed()));
     }
+
+    @After
+    public void tearDown() throws Exception{
+
+    }
+
 }
