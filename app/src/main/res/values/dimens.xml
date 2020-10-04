@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="font_size">24sp</dimen>
+    <dimen name="textbox_width">208dp</dimen>
+    <dimen name="textbox_height">45dp</dimen>
+    <dimen name="item_font">18sp</dimen>
+</resources>
