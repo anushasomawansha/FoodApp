@@ -17,6 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 
+import com.example.foodrunner.CartMainActivity;
 import com.example.foodrunner.CatManagement.Model.Products;
 import com.example.foodrunner.R;
 import com.squareup.picasso.Picasso;
@@ -81,7 +82,7 @@ public class ProductList extends ArrayAdapter<Products> {
         btnAddtoCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context,Dinner.class);
+                Intent intent = new Intent(context, CartMainActivity.class);
                 context.startActivity(intent);
             }
         });
