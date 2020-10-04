@@ -44,4 +44,16 @@
     <string name="manageitems">Manage Items</string>
     <string name="longpress">Long Press To Delete/Update Item</string>
 
+
+    <string name="add_more_btn">add more item</string>
+    <string name="submit_btn">submit</string>
+
+    <color name="Black">#000000</color>
+    <color name="ExpendChildBackground">#2e856e</color>
+    <color name="ExpendChildBackground1">#ffffff</color>
+    <color name="ExpendGroupBackground">#00e600</color>
+    <color name="SplashWindowBackground">#99e6ff</color>
+
+
+
 </resources>

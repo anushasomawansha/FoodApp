@@ -19,6 +19,10 @@
         <activity android:name=".CatManagement.Activity.Breakfast" />
         <activity android:name=".CatManagement.Activity.DeleteItem" />
         <activity android:name=".CatManagement.Activity.AddItem" />
+        <activity android:name=".CartManagement.Model.ui.ListShoppingList"></activity>
+        <activity android:name=".CartManagement.Model.ui.CreateShoppingList" />
+        <activity android:name=".CartMainActivity" />
+        <activity android:name=".Category" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
