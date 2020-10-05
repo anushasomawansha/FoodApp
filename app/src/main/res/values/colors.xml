@@ -7,4 +7,11 @@
     <color name="textbox_background">#BEBABA</color>
     <color name="btnColor">#1179F4</color>
     <color name="background">#99e6ff</color>
+
+    <!--Colors related to login/signup-->
+    <color name="background_color">#ADD8E6</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="white_greyish">#EEEEEE</color>
+    <color name="button_selectorcolor">#9E9E9E</color>
 </resources>
