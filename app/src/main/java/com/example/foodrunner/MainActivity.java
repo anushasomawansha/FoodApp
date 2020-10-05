@@ -12,6 +12,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.foodrunner.CatManagement.Activity.Breakfast;
+
 public class MainActivity extends AppCompatActivity {
 
     private static int SPLASH_TIME_OUT = 5000;
@@ -60,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, Category.class);
+                Intent intent = new Intent(MainActivity.this, Breakfast.class);
                 startActivity(intent);
                 finish();
             }
