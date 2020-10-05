@@ -8,6 +8,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.widget.ImageButton;
 
@@ -15,6 +16,8 @@ import com.example.foodrunner.CartMainActivity;
 import com.example.foodrunner.CartManagement.Model.common.ShopItem;
 import com.example.foodrunner.CartManagement.Model.firebase.AddShoppingModel;
 import com.example.foodrunner.R;
+import com.example.foodrunner.payment.OnlinePayment;
+import com.example.foodrunner.payment.payondelivery;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -26,6 +29,7 @@ import java.util.Collections;
 public class ListShoppingList extends AppCompatActivity {
 
     ImageButton addShoppingButton;
+    Button btnDelivery,btnOnline;
     private CreateAndFillValuesInShoppingRows createAndFillValuesInListShoppingRows;
     private ExpandableListView expandableListView;
 
@@ -35,6 +39,8 @@ public class ListShoppingList extends AppCompatActivity {
         setContentView(R.layout.activity_list_shopping_list);
 
         addShoppingButton=findViewById(R.id.addButton);
+        btnDelivery=findViewById(R.id.btnDelivery);
+        btnOnline=findViewById(R.id.btnOnline);
         expandableListView=findViewById(R.id.Explist);
         fetchAndPopulateEntriesInExpandableListView();
         addShoppingButton.setOnClickListener(new View.OnClickListener() { //move to shopping list activity
@@ -44,6 +50,25 @@ public class ListShoppingList extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnOnline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(ListShoppingList.this, OnlinePayment.class);
+                startActivity(intent);
+
+            }
+        });
+
+        btnDelivery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(ListShoppingList.this, payondelivery.class);
+                startActivity(intent);
+
+            }
+        });
+
 
     }
 

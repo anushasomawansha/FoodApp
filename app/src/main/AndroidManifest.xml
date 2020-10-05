@@ -9,29 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".payment.listViewOnline">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
-        </activity>
-        <activity android:name=".payment.payondelivery">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".payment.OnlinePayment">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".CatManagement.Activity.DinnerAdmin"></activity>
+        <activity android:name=".CatManagement.Activity.LunchAdmin" />
+        <activity android:name=".CatManagement.Activity.BreakfastAdmin" />
+        <activity android:name=".CatManagement.Activity.Dinner" />
+        <activity android:name=".CatManagement.Activity.Lunch" />
+        <activity android:name=".CatManagement.Activity.Breakfast" />
+        <activity android:name=".CatManagement.Activity.DeleteItem" />
+        <activity android:name=".CatManagement.Activity.AddItem" />
+        <activity android:name=".CartManagement.Model.ui.ListShoppingList"></activity>
+        <activity android:name=".CartManagement.Model.ui.CreateShoppingList" />
+        <activity android:name=".payment.OnlinePayment" />
+        <activity android:name=".payment.payondelivery" />
+        <activity android:name=".CartMainActivity" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Category" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,5 +34,7 @@
             </intent-filter>
         </activity>
     </application>
+
+
 
 </manifest>
