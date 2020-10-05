@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.foodrunner.CatManagement.Activity.Breakfast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -103,7 +104,7 @@ public class Log_Del_MainActivity extends AppCompatActivity {
     }
 
     public void Category(FirebaseUser currentUser) {
-        Intent profileIntent = new Intent(getApplicationContext(), Category.class);
+        Intent profileIntent = new Intent(getApplicationContext(), Breakfast.class);
         profileIntent.putExtra("email", currentUser.getEmail());
         Log.v("DATA", currentUser.getUid());
         startActivity(profileIntent);

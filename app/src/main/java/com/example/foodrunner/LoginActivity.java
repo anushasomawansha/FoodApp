@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.foodrunner.CatManagement.Activity.Breakfast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -63,7 +64,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(LoginActivity.this,"Login successfully!",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(),Category.class));
+                            startActivity(new Intent(getApplicationContext(), Breakfast.class));
                         }
                         else{
                             Toast.makeText(LoginActivity.this, "Error !"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();

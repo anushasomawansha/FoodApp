@@ -30,13 +30,13 @@
         <activity android:name=".payment.payondelivery" />
         <activity android:name=".CartMainActivity" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"/>
 
         <meta-data android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBc0cU5JCP7s-T7S8sVDYAX1ToJTuYhqWc"/>
 
         <activity android:name=".FinalDelivery" />
-        <activity android:name=".Category" />
+
         <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".Delivery" />
         <activity android:name=".SignupActivity" />
