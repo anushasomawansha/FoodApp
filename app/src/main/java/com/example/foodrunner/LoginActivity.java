@@ -13,7 +13,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.foodrunner.CatManagement.Activity.AddItem;
 import com.example.foodrunner.CatManagement.Activity.Breakfast;
+import com.example.foodrunner.CatManagement.Activity.BreakfastAdmin;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -22,7 +24,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivity extends AppCompatActivity {
 
     EditText editmail,editPwd;
-    Button loginBtn,resetBtn,newUserBtn;
+    Button loginBtn,resetBtn,newUserBtn , btnAdminLogin;
     ProgressBar progressBar;
     FirebaseAuth fAuth;
 
@@ -34,6 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         editmail=findViewById(R.id.editMobile);
         editPwd=findViewById(R.id.editPwd);
         loginBtn=findViewById(R.id.loginBtn);
+        btnAdminLogin=findViewById(R.id.btnAdminLogin);
         newUserBtn=findViewById(R.id.newUserBtn);
         progressBar=findViewById(R.id.progressBar);
         fAuth=FirebaseAuth.getInstance();
@@ -72,6 +75,15 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 });
+            }
+        });
+
+
+        btnAdminLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, AddItem.class);
+                startActivity(intent);
             }
         });
         newUserBtn.setOnClickListener(new View.OnClickListener() {

@@ -12,9 +12,12 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.foodrunner.CartMainActivity;
 import com.example.foodrunner.CatManagement.Model.Products;
+import com.example.foodrunner.Delivery;
 import com.example.foodrunner.MainActivity;
 import com.example.foodrunner.R;
+import com.example.foodrunner.SignupActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -84,15 +87,15 @@ public class Dinner extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.cart:
-                        startActivity(new Intent(getApplicationContext(),Lunch.class));
+                        startActivity(new Intent(getApplicationContext(), CartMainActivity.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.location:
-                        startActivity(new Intent(getApplicationContext(),Lunch.class));
+                        startActivity(new Intent(getApplicationContext(), Delivery.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.profile:
-                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(), SignupActivity.class));
                         overridePendingTransition(0,0);
                         return true;
                 }

@@ -30,8 +30,13 @@
         <activity android:name=".payment.payondelivery" />
         <activity android:name=".CartMainActivity" />
 
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <meta-data android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBc0cU5JCP7s-T7S8sVDYAX1ToJTuYhqWc"/>
 
@@ -41,11 +46,6 @@
         <activity android:name=".Delivery" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
