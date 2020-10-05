@@ -3,4 +3,8 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="textbox_color">#BEBABA</color>
+    <color name="textbox_background">#BEBABA</color>
+    <color name="btnColor">#1179F4</color>
+    <color name="background">#99e6ff</color>
 </resources>
