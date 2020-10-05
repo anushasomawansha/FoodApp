@@ -14,6 +14,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+
+
+        <activity android:name=".CatManagement.Activity.DinnerAdmin"></activity>
+        <activity android:name=".CatManagement.Activity.LunchAdmin" />
+        <activity android:name=".CatManagement.Activity.BreakfastAdmin" />
+        <activity android:name=".CatManagement.Activity.Dinner" />
+        <activity android:name=".CatManagement.Activity.Lunch" />
+        <activity android:name=".CatManagement.Activity.Breakfast" />
+        <activity android:name=".CatManagement.Activity.DeleteItem" />
+        <activity android:name=".CatManagement.Activity.AddItem" />
+        <activity android:name=".CartManagement.Model.ui.ListShoppingList"></activity>
+        <activity android:name=".CartManagement.Model.ui.CreateShoppingList" />
+        <activity android:name=".payment.OnlinePayment" />
+        <activity android:name=".payment.payondelivery" />
+        <activity android:name=".CartMainActivity" />
+
+        <activity android:name=".MainActivity">
+
         <meta-data android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBc0cU5JCP7s-T7S8sVDYAX1ToJTuYhqWc"/>
 
@@ -29,8 +47,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
     </application>
 
 </manifest>
