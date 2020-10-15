@@ -142,6 +142,7 @@
     <string name="view_saved_location">View Saved Location</string>
     <string name="delivery_options">Delivery Options</string>
     <string name="admin">log in as admin</string>
+    <string name="details">Customer Card Details</string>
 
 
 </resources>

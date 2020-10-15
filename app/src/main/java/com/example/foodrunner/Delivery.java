@@ -10,22 +10,26 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.foodrunner.CatManagement.Activity.Breakfast;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.Places;
 import com.google.android.gms.location.places.ui.PlacePicker;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -95,7 +99,7 @@ public class Delivery extends AppCompatActivity implements View.OnClickListener 
             public void onClick(View view) {
 
 
-                if (TextUtils.isEmpty(date)) {
+             /*   if (TextUtils.isEmpty(date)) {
                     dateIn.setError("Date is Required.");
                     return;
                 }
@@ -104,7 +108,7 @@ public class Delivery extends AppCompatActivity implements View.OnClickListener 
                     timeIn.setError("Time is Required");
                     return;
                 }
-                
+                */
                 
                 dbRef = FirebaseDatabase.getInstance().getReference().child("User").child("1");
                 pck.setDate(dateIn.getText().toString().trim());
@@ -112,7 +116,9 @@ public class Delivery extends AppCompatActivity implements View.OnClickListener 
 
 
                 dbRef.child("1").setValue(pck);
-
+                Toast.makeText(Delivery.this,"Order Submitted Successfully",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(Delivery.this, Breakfast.class);
+                startActivity(intent);
             }
         });
 
@@ -138,6 +144,34 @@ public class Delivery extends AppCompatActivity implements View.OnClickListener 
         });
 
 
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.menu);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.menu:
+                        startActivity(new Intent(getApplicationContext(),Breakfast.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.cart:
+                        startActivity(new Intent(getApplicationContext(), CartMainActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.location:
+                        startActivity(new Intent(getApplicationContext(), Delivery.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.profile:
+                        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+
+                return false;
+            }
+        });
     }
     //End of onCreate method
 

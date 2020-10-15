@@ -2,6 +2,7 @@ package com.example.foodrunner.payment;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.foodrunner.Delivery;
 import com.example.foodrunner.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -83,6 +85,8 @@ public class OnlinePayment extends AppCompatActivity {
             Orders mem = new Orders(id,name,cardnumber,expdate,cvv);
             databaseOrders.push().setValue(mem);
             Toast.makeText(this,"Order Complete!!",Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(OnlinePayment.this , Delivery.class);
+            startActivity(intent);
         }
 
 

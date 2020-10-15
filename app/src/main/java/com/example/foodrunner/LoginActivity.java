@@ -82,8 +82,39 @@ public class LoginActivity extends AppCompatActivity {
         btnAdminLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, AddItem.class);
-                startActivity(intent);
+                String email=editmail.getText().toString().trim();
+                String password=editPwd.getText().toString().trim();
+
+                if(TextUtils.isEmpty(email)){
+                    editmail.setError("UserName is Required.");
+                    return;
+                }
+
+                if(TextUtils.isEmpty(password)){
+                    editPwd.setError("Password is Required");
+                    return;
+                }
+                if(password.length()<6){
+                    editPwd.setError("Password Must be more than 6 Characters.");
+                    return;
+                }
+                progressBar.setVisibility(View.VISIBLE);
+
+                fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(LoginActivity.this,"Login successfully!",Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(LoginActivity.this, AdminSelect.class);
+                            startActivity(intent);
+                        }
+                        else{
+                            Toast.makeText(LoginActivity.this, "Error !"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                            progressBar.setVisibility(View.GONE);
+                        }
+                    }
+                });
+
             }
         });
         newUserBtn.setOnClickListener(new View.OnClickListener() {

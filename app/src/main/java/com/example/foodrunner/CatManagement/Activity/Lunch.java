@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.example.foodrunner.CartMainActivity;
 import com.example.foodrunner.CatManagement.Model.Products;
 import com.example.foodrunner.Delivery;
+import com.example.foodrunner.LoginActivity;
 import com.example.foodrunner.MainActivity;
 import com.example.foodrunner.R;
 import com.example.foodrunner.SignupActivity;
@@ -96,7 +97,7 @@ public class Lunch extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.profile:
-                        startActivity(new Intent(getApplicationContext(), SignupActivity.class));
+                        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                         overridePendingTransition(0,0);
                         return true;
                 }

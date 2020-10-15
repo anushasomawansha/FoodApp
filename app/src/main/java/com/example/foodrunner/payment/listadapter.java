@@ -30,7 +30,7 @@ public class listadapter extends ArrayAdapter{
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
         LayoutInflater inflater = mContext.getLayoutInflater();
-        View listItemView = inflater.inflate(R.layout.activity_list_view_online,null,true);
+        View listItemView = inflater.inflate(R.layout.listview,null,true);
 
         TextView tvName = listItemView.findViewById(R.id.tvName);
         TextView tvCarNum = listItemView.findViewById(R.id.tvCarNum);
